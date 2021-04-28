@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { BackgroundImg, Logo, AnimatedText } from '../../components'
+import { BackgroundImg, Logo, AnimatedText, AnimatedBtn} from '../../components'
 
 import './styles.css';
 
@@ -14,6 +14,10 @@ class Main extends React.Component {
         this.state = {}
     }
 
+    playBtnClick = () => {
+        this.props.showOptions()
+    }
+
     render() {
         return ( 
         <div className="main_page">
@@ -23,6 +27,9 @@ class Main extends React.Component {
                     <Logo uri={logoImg} />
                 </div>
                 <AnimatedText text="Max Chess" delay={1} />
+            </div>
+            <div className="play_btn">
+                <AnimatedBtn text="Play" onClick={this.playBtnClick} />
             </div>
         </div>
         );
