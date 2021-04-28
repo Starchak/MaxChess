@@ -1,0 +1,32 @@
+.animated_text {
+    color: #fff;
+    font-size: 3em;
+}
+
+.animated_text span {
+    display: inline-block;
+    white-space: pre;
+    opacity: 0;
+    transform: translate(-300px, 0) scale(0);
+    animation: sideSlide .5s forwards;
+}
+
+@keyframes sideSlide {
+    60% {
+        transform: translate(20px, 0) scale(1);
+        color: #fff;
+    }
+    80% {
+        transform: translate(20px, 0) scale(1);
+        color: #fff;
+    }
+    99% {
+        transform: translate(0) scale(1.2);
+        color: #fadadd;
+    }
+    100% {
+        transform: translate(0) scale(1);
+        opacity: 1;
+        color: #fff;
+    }
+}

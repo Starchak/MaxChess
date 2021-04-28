@@ -1,0 +1,24 @@
+.bgimg_container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+.bgimg_container .cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fadadd;
+    opacity: 0.3;
+}
+
+.bgimg_container .bgimg {
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+}

@@ -1,0 +1,36 @@
+.main_page {}
+
+.main_page .logo_container {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: logoContainerAnimation 0.5s forwards;
+    animation-delay: 2.5s;
+}
+
+.logo_animation {
+    position: relative;
+    left: 50%;
+    transform: scale(2);
+    animation: logoAnimation 1s forwards;
+}
+
+@keyframes logoAnimation {
+    50% {
+        transform: scale(1);
+        left: 50%;
+    }
+    100% {
+        transform: scale(1);
+        left: 0;
+    }
+}
+
+@keyframes logoContainerAnimation {
+    100% {
+        top: 50px;
+    }
+}
