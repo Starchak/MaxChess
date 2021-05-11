@@ -1,39 +1,50 @@
-import React from 'react';
+import React from "react";
 
-import { BackgroundImg, Logo, AnimatedText, AnimatedBtn} from '../../components'
+import {
+  BackgroundImg,
+  Logo,
+  AnimatedText,
+  AnimatedBtn,
+} from "../../components";
 
-import './styles.css';
+import "./styles.css";
 
-import BGimg from '../../assets/MainBG.png';
-import logoImg from '../../assets/Logo.png'
+import BGimg from "../../assets/MainBG.png";
+import logoImg from "../../assets/Logo.png";
 
 class Main extends React.Component {
-    constructor(props) {
-        super(props);
+  constructor(props) {
+    super(props);
 
-        this.state = {}
-    }
+    this.state = {};
+  }
 
-    playBtnClick = () => {
-        this.props.showOptions()
-    }
+  playBtnClick = () => {
+    this.props.hideMain();
+    this.props.showOptions();
+  };
 
-    render() {
-        return ( 
-        <div className="main_page">
-            <BackgroundImg uri={BGimg}/>
-            <div className="logo_container">
-                <div className="logo_animation">
-                    <Logo uri={logoImg} />
-                </div>
-                <AnimatedText text="Max Chess" delay={1} />
-            </div>
-            <div className="play_btn">
-                <AnimatedBtn text="Play" onClick={this.playBtnClick} />
-            </div>
+  render() {
+    console.log(this.props.isVisible);
+    return (
+      <div
+        className={`main_page ${
+          this.props.isVisible ? "show_main" : "hide_main"
+        }`}
+      >
+        <BackgroundImg uri={BGimg} />
+        <div className="logo_container">
+          <div className="logo_animation">
+            <Logo uri={logoImg} />
+          </div>
+          <AnimatedText text="Max Chess" delay={1} />
         </div>
-        );
-    }
+        <div className="play_btn">
+          <AnimatedBtn text="Play" onClick={this.playBtnClick} />
+        </div>
+      </div>
+    );
+  }
 }
 
 export default Main;

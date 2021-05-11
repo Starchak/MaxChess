@@ -1,23 +1,27 @@
-import React from 'react';
+import React from "react";
 
-import { AnimatedText } from '../../components';
+import { PlayerForm } from "../../components";
 
-import './styles.css';
+import "./styles.css";
 
 class Options extends React.Component {
-    constructor(props) {
-        super(props);
+  constructor(props) {
+    super(props);
 
-        this.state = {}
-    }
+    this.state = {};
+  }
 
-    render() {
-        return (
-        <div className="options_page">
-            <AnimatedText text="Hello from animated text" delay="0" />
-        </div>
-        );
-    }
+  render() {
+    return (
+      <div
+        className={`options_page ${
+          this.props.isVisible ? "show_options" : "hide_options"
+        }`}
+      >
+        <PlayerForm />
+      </div>
+    );
+  }
 }
 
 export default Options;

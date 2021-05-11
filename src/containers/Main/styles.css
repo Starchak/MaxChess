@@ -1,9 +1,25 @@
-.main_page {}
+.main_page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s ease-in;
+}
+
+.hide_main {
+    left: -100%;
+}
+
+.show_main {
+    left: 0;
+}
 
 .main_page .logo_container {
     display: flex;
     align-items: center;
-    position: absolute;
+    position: fixed;
+    z-index: 10;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
