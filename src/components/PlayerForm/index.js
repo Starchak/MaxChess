@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { InputText } from '../'
+
 import './styles.css'
 class PlayerForm extends React.Component {
 
@@ -14,7 +16,10 @@ class PlayerForm extends React.Component {
   render() {
     return (
       <div className="player_form">
+        <div>
         <p>Name: </p>
+        <InputText />
+        </div>
       </div>
     )
   }
