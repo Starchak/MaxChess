@@ -1,0 +1,6 @@
+{
+  "name": "max-chess-server",
+  "version": "0.0.1",
+  "description": "Server for Max-Chess application to support multiplayer games",
+  "dependencies": {}
+}

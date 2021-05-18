@@ -2,6 +2,7 @@ import React from "react";
 
 import Main from "./containers/Main";
 import Options from "./containers/Options";
+import Game from "./containers/Game";
 
 class App extends React.Component {
   constructor(props) {
@@ -10,6 +11,7 @@ class App extends React.Component {
     this.state = {
       renderMain: true,
       renderOptions: false,
+      renderGame: false,
     };
   }
 
@@ -18,9 +20,7 @@ class App extends React.Component {
   };
 
   hideMain = () => {
-    console.log("hide main");
     this.setState({ renderMain: false });
-    console.log("Hide main: ", this.state.renderMain);
   };
 
   showOptions = () => {
@@ -29,6 +29,14 @@ class App extends React.Component {
 
   hideOptions = () => {
     this.setState({ renderOptions: false });
+  };
+
+  showGame = () => {
+    this.setState({ renderGame: true });
+  };
+
+  hideGame = () => {
+    this.setState({ renderGame: false });
   };
 
   render() {
@@ -41,8 +49,10 @@ class App extends React.Component {
         />
         <Options
           hideOptions={this.hideOptions}
+          showGame={this.showGame}
           isVisible={this.state.renderOptions}
         />
+        <Game hideGame={this.hideGame} isVisible={this.state.renderGame} />
       </div>
     );
   }

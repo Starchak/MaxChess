@@ -8,19 +8,22 @@ class PlayerForm extends React.Component {
     super(props);
 
     this.state = {
-      charArr: [],
+      nameText: "",
     };
   }
 
   findOpponentClick = () => {
     console.log("Find opponent");
+    this.props.showGame();
   };
 
   render() {
     return (
       <div className="player_form">
         <InputText text="Name" />
-        <Button text="Find Opponent" onClick={this.findOpponentClick} />
+        <div style={{ marginTop: "26px" }}>
+          <Button text="Find Opponent" onClick={this.findOpponentClick} />
+        </div>
       </div>
     );
   }

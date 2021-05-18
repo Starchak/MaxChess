@@ -25,7 +25,6 @@ class Main extends React.Component {
   };
 
   render() {
-    console.log(this.props.isVisible);
     return (
       <div
         className={`main_page ${
