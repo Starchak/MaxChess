@@ -1,17 +1,19 @@
 .player_form {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 500px;
-    height: 300px;
-    padding: 25px;
-    background: #fff;
-    border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 300px;
+  padding: 25px;
+  background: #fff;
+  border-radius: 50px;
 }
 
 .player_form p {
-    font-size: 1.5em;
+  font-size: 1.5em;
 }

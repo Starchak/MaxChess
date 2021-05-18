@@ -1,41 +1,41 @@
-.input-text_controll {
-    position: relative;
-    margin: 20px 0;
-    width: 300px;
+.input-text_control {
+  position: relative;
+  margin: 20px 0;
+  width: 300px;
 }
 
-.input-text_controll input {
-    border: 0;
-    border-bottom: 2px solid #333;
-    padding: 15px 0;
-    display: block;
-    font-size: 18px;
-    font-family: 'Muli', sans-serif;
-    width: 100%;
-    transition: 0.1s ease-in;
+.input-text_control input {
+  border: 0;
+  border-bottom: 2px solid #333;
+  padding: 15px 0;
+  display: block;
+  font-size: 18px;
+  font-family: "Muli", sans-serif;
+  width: 100%;
+  transition: 0.1s ease-in;
 }
 
-.input-text_controll input:focus,
-.input-text_controll input:valid {
-    border-bottom-color: darksalmon;
-    outline: none;
+.input-text_control input:focus,
+.input-text_control input:valid {
+  border-bottom-color: darksalmon;
+  outline: none;
 }
 
-.input-text_controll input:focus+label span,
-.input-text_controll input:valid+label span {
-    color: darksalmon;
-    transform: translateY(-30px);
+.input-text_control input:focus + label span,
+.input-text_control input:valid + label span {
+  color: darksalmon;
+  transform: translateY(-30px);
 }
 
-.input-text_controll label {
-    position: absolute;
-    top: 15px;
-    left: 0;
+.input-text_control label {
+  position: absolute;
+  top: 15px;
+  left: 0;
 }
 
-.input-text_controll label span {
-    display: inline-block;
-    font-size: 18px;
-    min-width: 5px;
-    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+.input-text_control label span {
+  display: inline-block;
+  font-size: 18px;
+  min-width: 5px;
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }

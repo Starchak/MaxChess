@@ -1,16 +1,11 @@
-import React from 'react';
+import React from "react";
 
-import './styles.css'
+import "./styles.css";
 
-class AnimatedBtn extends React.Component {
-  render() {
-    return (
-      <div className="animatedBtn" onClick={()=> this.props.onClick()}>
-        <span>{this.props.text}</span>
-      </div>
-  )
-  }
-}
-
-export {AnimatedBtn}
-  
+export const AnimatedBtn = ({ text, onClick }) => {
+  return (
+    <div className="animatedBtn" onClick={() => onClick()}>
+      <span>{text}</span>
+    </div>
+  );
+};

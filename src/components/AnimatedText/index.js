@@ -1,14 +1,13 @@
-import React from 'react';
+import React from "react";
 
-import './styles.css'
+import "./styles.css";
 class AnimatedText extends React.Component {
-
   constructor(props) {
     super(props);
 
     this.state = {
-      charArr: []
-    }
+      charArr: [],
+    };
   }
 
   componentDidMount() {
@@ -17,12 +16,12 @@ class AnimatedText extends React.Component {
     for (let i = 0; i < text.length; i++) {
       charArr.push(text.charAt(i));
     }
-    this.setState({charArr});
+    this.setState({ charArr });
   }
 
   getAnimationDelay = (i) => {
-    return this.props.delay + (++i * 0.05) + 's';
-  }
+    return this.props.delay + ++i * 0.05 + "s";
+  };
 
   render() {
     return (
@@ -33,9 +32,8 @@ class AnimatedText extends React.Component {
           </span>
         ))}
       </div>
-    )
+    );
   }
 }
-    
-export {AnimatedText}
-  
+
+export { AnimatedText };
