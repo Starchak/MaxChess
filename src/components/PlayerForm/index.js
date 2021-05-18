@@ -17,8 +17,7 @@ class PlayerForm extends React.Component {
     return (
       <div className="player_form">
         <div>
-        <p>Name: </p>
-        <InputText />
+        <InputText text="Name" />
         </div>
       </div>
     )
